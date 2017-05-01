@@ -19,11 +19,9 @@ void setup()
   smooth();
 
   // arduino = new Arduino(this, Arduino.list()[0], 57600);
-
   // arduino.pinMode(12, Arduino.SERVO);
   // arduino.pinMode(11, Arduino.SERVO);
-  // arduino.servoWrite(12, 45);
-  // arduino.servoWrite(11, 45);
+
 
   mainStage = new ControlP5(this);
 
@@ -118,4 +116,5 @@ void draw()
   }
 
   render(motorPairs);
+  controlArduino(motorPairs);
 }
