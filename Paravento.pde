@@ -18,11 +18,17 @@ void setup()
 {
   smooth();
 
-  // arduino = new Arduino(this, Arduino.list()[0], 57600);
-  // arduino.pinMode(12, Arduino.SERVO);
-  // arduino.pinMode(11, Arduino.SERVO);
-
-
+  arduino = new Arduino(this, Arduino.list()[0], 57600);
+  arduino.pinMode(12, Arduino.SERVO);
+  arduino.pinMode(11, Arduino.SERVO);
+  arduino.pinMode(10, Arduino.SERVO);
+  arduino.pinMode(9, Arduino.SERVO);
+  
+  arduino.servoWrite(12, 45);
+  arduino.servoWrite(11, 45);
+  arduino.servoWrite(10, 45);
+  arduino.servoWrite(9, 45);
+  
   mainStage = new ControlP5(this);
 
   mainStage.addKnob("motor1")
